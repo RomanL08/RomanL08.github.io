@@ -96,10 +96,14 @@ h1 {
 }
 
 footer {
-    text-align: center;
     margin-top: 60px;
     padding-top: 20px;
-    border-top: 1px solid #ddd;
-    color: #888;
-    font-size: 0.9rem;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+footer hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin-bottom: 20px;
 }
