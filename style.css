@@ -18,23 +18,17 @@ a {
 a:hover {
     text-decoration: none;
 }
-nav {
-    margin-bottom: 30px;
-}
 
-nav a {
-    margin-right: 20px;
-    text-decoration: none;
-    font-weight: bold;
-}
 nav {
-    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+    margin-bottom: 50px;
     border-bottom: 1px solid #ddd;
     padding-bottom: 15px;
 }
 
 nav a {
-    margin-right: 25px;
     text-decoration: none;
     font-weight: bold;
     color: #222;
@@ -42,4 +36,8 @@ nav a {
 
 nav a:hover {
     color: #0066cc;
+}
+
+body {
+    background-color: #fafafa;
 }
