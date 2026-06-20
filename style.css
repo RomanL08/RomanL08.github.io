@@ -34,10 +34,10 @@ nav a {
     color: #222;
 }
 
-nav a:hover {
-    color: #0066cc;
-}
 
 body {
     background-color: #fafafa;
+}
+nav a:hover {
+    color: #0066cc;
 }
