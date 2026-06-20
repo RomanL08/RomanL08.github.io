@@ -6,9 +6,14 @@ body {
     line-height: 1.8;
     color: #222;
 }
-
 h1 {
     font-size: 3rem;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 40px;
 }
 
 a {
@@ -40,4 +45,12 @@ body {
 }
 nav a:hover {
     color: #0066cc;
+}
+.post {
+    margin-bottom: 40px;
+}
+
+.date {
+    color: #888;
+    font-size: 0.9rem;
 }
