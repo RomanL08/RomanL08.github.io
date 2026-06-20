@@ -60,6 +60,11 @@ nav a:hover {
     box-shadow: 0 4px 12px rgba(0,0,0,0.10);
 }
 
+.post a {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
 .date {
     color: #888;
     font-size: 0.9rem;
