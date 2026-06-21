@@ -8,6 +8,14 @@ try:
 except FileNotFoundError:
     pass
 
+try:
+    with open("completed.txt", "r") as file:
+        for line in file:
+            completed.append(line.strip())
+except FileNotFoundError:
+    pass
+
+
 while True:
     print("\nHabit Tracker")
     print("1. Add Habit")
@@ -40,6 +48,7 @@ while True:
             print("No habits to complete yet.")
         else:
             print("\nYour Habits:")
+
             for i, habit in enumerate(habits):
                 print(f"{i + 1}. {habit}")
 
@@ -56,6 +65,7 @@ while True:
             print("No habits to delete.")
         else:
             print("\nYour Habits:")
+
             for i, habit in enumerate(habits):
                 print(f"{i + 1}. {habit}")
 
@@ -69,11 +79,15 @@ while True:
                 if deleted_habit in completed:
                     completed.remove(deleted_habit)
 
-                    print("Habit deleted!")
+                print("Habit deleted!")
 
     elif choice == "5":
         with open("habits.txt", "w") as file:
             for habit in habits:
+                file.write(habit + "\n")
+
+        with open("completed.txt", "w") as file:
+            for habit in completed:
                 file.write(habit + "\n")
 
         print("Habits saved!")
