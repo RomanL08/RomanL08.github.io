@@ -1,20 +1,20 @@
 habits = []
 completed = []
 
-try:
-    with open("habits.txt", "r") as file:
-        for line in file:
-            habits.append(line.strip())
-except FileNotFoundError:
-    pass
+def load_file(filename):
+    try:
+        with open(filename, "r") as file:
+            return [line.strip() for line in file]
+    except FileNotFoundError:
+        return []
 
-try:
-    with open("completed.txt", "r") as file:
-        for line in file:
-            completed.append(line.strip())
-except FileNotFoundError:
-    pass
+habits = load_file("habits.txt")
+completed = load_file("completed.txt")
 
+def save_file(filename, items):
+    with open(filename, "w") as file:
+        for item in items:
+            file.write(item + "\n")
 
 while True:
     print("\nHabit Tracker")
@@ -82,13 +82,8 @@ while True:
                 print("Habit deleted!")
 
     elif choice == "5":
-        with open("habits.txt", "w") as file:
-            for habit in habits:
-                file.write(habit + "\n")
-
-        with open("completed.txt", "w") as file:
-            for habit in completed:
-                file.write(habit + "\n")
+        save_file("habits.txt", habits)
+        save_file("completed.txt", completed)
 
         print("Habits saved!")
         print("Goodbye!")
