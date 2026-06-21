@@ -6,9 +6,9 @@ body {
     line-height: 1.8;
     color: #222;
 }
-
 h1 {
-    font-size: 3rem;
+    font-size: 4rem;
+    margin-bottom: 20px;
 }
 
 .subtitle {
@@ -78,32 +78,3 @@ nav a:hover {
     margin-top: 30px;
 }
 
-.profile-card h2 {
-    margin-top: 0;
-}
-
-.profile-card ul {
-    padding-left: 20px;
-}
-
-.profile-card li {
-    margin-bottom: 5px;
-}
-
-article h1,
-h1 {
-    line-height: 1.1;
-}
-
-footer {
-    margin-top: 60px;
-    padding-top: 20px;
-    color: #666;
-    font-size: 0.85rem;
-}
-
-footer hr {
-    border: none;
-    border-top: 1px solid #ccc;
-    margin-bottom: 20px;
-}
