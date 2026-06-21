@@ -90,3 +90,46 @@ nav a:hover {
     color: #777;
     font-size: 0.9rem;
 }
+.post {
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: none;
+    background: none;
+}
+
+.post a {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.intro {
+    margin: 60px 0;
+}
+
+.intro h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+}
+
+.post {
+    margin-bottom: 30px;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.post a {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.post p {
+    margin-top: 8px;
+    color: #666;
+}
