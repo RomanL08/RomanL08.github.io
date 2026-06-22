@@ -4,65 +4,90 @@
     <a href="notes.html">Notes</a>
  </nav>
 
-<p>
-  This is a terminal-based Python habit tracker. It lets users add habits,
-  mark habits as completed, delete habits, save data, and view statistics.
-</p>
+<h1>Habit Tracker</h1>
 
-<h2>What I Learned</h2>
-<p>
-  I practiced Python lists, loops, conditionals, functions, file handling,
-  and input validation.
-</p>
+<div class="tracker">
+    <input type="text" id="habitInput" placeholder="Enter a habit">
+    <button onclick="addHabit()">Add Habit</button>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Habit Tracker</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <h2>Your Habits</h2>
+    <ul id="habitList"></ul>
 
-    <h1>Python Habit Tracker</h1>
+    <h2>Statistics</h2>
+    <p id="stats"></p>
+</div>
 
-    <p>
-        A terminal-based Python application that helps users track habits and
-        measure progress over time.
-    </p>
+<script>
+    let habits = JSON.parse(localStorage.getItem("habits")) || [];
 
-    <h2>Features</h2>
+    function saveHabits() {
+        localStorage.setItem("habits", JSON.stringify(habits));
+    }
 
-    <ul>
-        <li>Add habits</li>
-        <li>View habits</li>
-        <li>Complete habits</li>
-        <li>Delete habits</li>
-        <li>Automatic saving</li>
-        <li>Completion statistics</li>
-    </ul>
+    function showHabits() {
+        const habitList = document.getElementById("habitList");
+        const stats = document.getElementById("stats");
 
-    <h2>What I Learned</h2>
+        habitList.innerHTML = "";
 
-    <p>
-        This project helped me practice:
-    </p>
+        habits.forEach((habit, index) => {
+            const li = document.createElement("li");
 
-    <ul>
-        <li>Lists</li>
-        <li>Functions</li>
-        <li>Loops</li>
-        <li>Conditional statements</li>
-        <li>File handling</li>
-        <li>Program organization</li>
-    </ul>
+            li.innerHTML = `
+                <span>${habit.name}</span>
+                <button onclick="completeHabit(${index})">
+                    ${habit.completed ? "Undo" : "Complete"}
+                </button>
+                <button onclick="deleteHabit(${index})">Delete</button>
+            `;
 
-    <h2>Technologies</h2>
+            if (habit.completed) {
+                li.style.textDecoration = "line-through";
+            }
 
-    <p>
-        Python 3, text files, VS Code
-    </p>
+            habitList.appendChild(li);
+        });
+
+        const completed = habits.filter(habit => habit.completed).length;
+        const total = habits.length;
+        const percentage = total > 0 ? (completed / total * 100).toFixed(1) : 0;
+
+        stats.textContent = `Completed: ${completed}/${total} (${percentage}%)`;
+    }
+
+    function addHabit() {
+        const input = document.getElementById("habitInput");
+        const name = input.value.trim();
+
+        if (name === "") {
+            alert("Please enter a habit.");
+            return;
+        }
+
+        habits.push({
+            name: name,
+            completed: false
+        });
+
+        input.value = "";
+        saveHabits();
+        showHabits();
+    }
+
+    function completeHabit(index) {
+        habits[index].completed = !habits[index].completed;
+        saveHabits();
+        showHabits();
+    }
+
+    function deleteHabit(index) {
+        habits.splice(index, 1);
+        saveHabits();
+        showHabits();
+    }
+
+    showHabits();
+</script>
 
     <footer>
         <p>© 2026 Roman Leite</p>
