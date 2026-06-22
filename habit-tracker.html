@@ -50,18 +50,21 @@
                 <button onclick="deleteHabit(${index})">Delete</button>
             `;
 
-            if (habit.completed) {
-                li.style.textDecoration = "line-through";
-            }
+                   if (habit.completed) {
+            li.style.textDecoration = "line-through";
+        }
 
-            habitList.appendChild(li);
-        });
+        habitList.appendChild(li);
+    });
 
-        const completed = habits.filter(habit => habit.completed).length;
-        const total = habits.length;
-        const percentage = total > 0 ? (completed / total * 100).toFixed(1) : 0;
+    const completed = habits.filter(habit => habit.completed).length;
+    const total = habits.length;
+    const percentage = total > 0 ? (completed / total * 100).toFixed(1) : 0;
 
-        stats.textContent = `Completed: ${completed}/${total} (${percentage}%)`;
+    stats.textContent = `Completed: ${completed}/${total} (${percentage}%)`;
+
+    document.getElementById("progressBar").style.width = percentage + "%";
+}
     }
 
     function addHabit() {
