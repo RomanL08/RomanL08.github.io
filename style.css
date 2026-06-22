@@ -69,3 +69,33 @@ footer {
     padding-top: 20px;
     color: #5a655d;
 }
+.tracker {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    margin-top: 20px;
+}
+
+.tracker input {
+    padding: 12px;
+    width: 260px;
+    font-size: 16px;
+}
+
+.tracker button {
+    padding: 12px 16px;
+    margin-left: 6px;
+    cursor: pointer;
+}
+
+#habitList {
+    list-style: none;
+    padding: 0;
+}
+
+#habitList li {
+    background: #f4f1ea;
+    padding: 14px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
