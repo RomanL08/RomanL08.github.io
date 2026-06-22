@@ -159,3 +159,66 @@ nav a:hover {
 h1, h2, h3 {
     color: #1f2e24;
 }
+
+/* Warm minimalist theme */
+
+body {
+    background-color: #faf8f2;
+    color: #2f3e34;
+}
+
+nav a {
+    color: #3f6b4f;
+}
+
+nav a:hover {
+    color: #274232;
+}
+
+h1, h2, h3 {
+    color: #1f2e24;
+}
+
+.post {
+    margin-bottom: 30px;
+    padding: 20px 0;
+    border-bottom: 1px solid #d9d3c7;
+}
+
+.post a {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #3f6b4f;
+}
+
+.post a:hover {
+    color: #274232;
+    text-decoration: underline;
+}
+
+.post p {
+    color: #5a655d;
+}
+
+.profile-card {
+    background: #fffdf8;
+    border: 1px solid #e6e0d3;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.intro {
+    margin: 60px 0;
+}
+
+.intro h1 {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.intro p {
+    font-size: 1.3rem;
+    color: #5a655d;
+    max-width: 700px;
+}
