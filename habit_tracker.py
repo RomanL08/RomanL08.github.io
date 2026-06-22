@@ -109,3 +109,9 @@ while True:
 
     else:
         print("Invalid choice. Try again.")
+    
+<footer>
+    <p>
+        Roman Leite · Built with HTML & CSS · Hosted on GitHub Pages
+    </p>
+</footer>

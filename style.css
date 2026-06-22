@@ -20,6 +20,8 @@ nav {
 }
 
 nav a {
+    font-weight: normal;
+}
     margin-left: 25px;
     color: #3f6b4f;
     text-decoration: none;
@@ -36,7 +38,7 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     margin-bottom: 20px;
 }
 
@@ -67,11 +69,12 @@ h1 {
     text-decoration: underline;
 }
 
-footer {
-    margin-top: 60px;
-    border-top: 1px solid #d9d3c7;
-    padding-top: 20px;
-    color: #5a655d;
+<footer>
+    <p>
+        Roman Leite · Built with HTML & CSS · Hosted on GitHub Pages
+    </p>
+</footer>
+
 }
 .tracker {
     background: #ffffff;
