@@ -16,19 +16,25 @@ def save_file(filename, items):
         for item in items:
             file.write(item + "\n")
 
+def save_all():
+    save_file("habits.txt", habits)
+    save_file("completed.txt", completed)
+
 while True:
     print("\nHabit Tracker")
     print("1. Add Habit")
     print("2. View Habits")
     print("3. Complete Habit")
     print("4. Delete Habit")
-    print("5. Exit")
+    print("5. Statistics")
+    print("6. Exit")
 
     choice = input("Choose an option: ")
 
     if choice == "1":
         habit = input("Enter a habit: ")
         habits.append(habit)
+        save_all()
         print("Habit added!")
 
     elif choice == "2":
@@ -57,7 +63,13 @@ while True:
             if number < 1 or number > len(habits):
                 print("Invalid habit number.")
             else:
-                completed.append(habits[number - 1])
+                habit = habits[number - 1]
+
+            if habit in completed:
+                print("Habit already completed.")
+            else:
+                completed.append(habit)
+                save_all()
                 print("Habit completed!")
 
     elif choice == "4":
@@ -79,13 +91,19 @@ while True:
                 if deleted_habit in completed:
                     completed.remove(deleted_habit)
 
+                save_all()
                 print("Habit deleted!")
 
     elif choice == "5":
-        save_file("habits.txt", habits)
-        save_file("completed.txt", completed)
+        print("\nStatistics")
+        print("Total habits:", len(habits))
+        print("Completed habits:", len(completed))
 
-        print("Habits saved!")
+        if len(habits) > 0:
+             percentage = len(completed) / len(habits) * 100
+             print(f"Completion rate: {percentage:.1f}%")
+
+    elif choice == "6":
         print("Goodbye!")
         break
 
