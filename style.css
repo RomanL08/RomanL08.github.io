@@ -4,7 +4,7 @@ body {
     padding: 0 20px;
     font-family: Georgia, serif;
     line-height: 1.7;
-    background-color: #faf8f2;;
+    background-color: #faf8f2;
     color: #2f3e34;
 }
 
@@ -16,12 +16,10 @@ nav {
 }
 
 nav a {
-    font-weight: normal;
-}
     margin-left: 25px;
     color: #3f6b4f;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 nav a:hover {
@@ -36,8 +34,8 @@ h1, h2, h3 {
 h1 {
     font-size: 3rem;
     margin-bottom: 20px;
+    
 }
-
 .intro {
     margin-bottom: 60px;
 }
