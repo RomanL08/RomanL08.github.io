@@ -67,3 +67,17 @@ html, body {
 body {
     padding-bottom: 400px;
 }
+
+html, body {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
