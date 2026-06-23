@@ -58,3 +58,12 @@ footer {
     margin-top: 100px;
     color: #5a655d;
 }
+
+html, body {
+    min-height: 100%;
+    overflow-y: auto;
+}
+
+body {
+    padding-bottom: 400px;
+}
