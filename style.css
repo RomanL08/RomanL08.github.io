@@ -54,13 +54,10 @@ ul {
     margin-bottom: 40px;
 }
 
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
+html {
+    overflow-y: auto;
 }
 
-footer {
-    margin-top: auto;
+body {
+    overflow-x: hidden;
 }
