@@ -7,6 +7,10 @@ body {
     line-height: 1.7;
     background-color: #faf8f2;
     color: #2f3e34;
+    }
+
+body {
+    padding-bottom: 300px;
 }
 
 nav {
