@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bitcoin Simulator</title>
+    <link rel="stylesheet" href="simulator.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <p>📅 Day: <span id="day">0</span></p>
+    <p>💶 Cash: €<span id="cash">1000</span></p>
+    <p>₿ Bitcoin: <span id="bitcoin">0</span></p>
+    <p>📈 Price: €<span id="price">50000</span></p>
+    <p>💼 Portfolio: €<span id="portfolio">1000</span></p>
+    <p>📊 P/L: €<span id="profit">0</span></p>
+
+</div>
+
+<canvas id="priceChart" width="500" height="250"></canvas>
+
+<button onclick="buyBitcoin()">Buy €100</button>
+<button onclick="sellBitcoin()">Sell All</button>
+<button onclick="nextDay()">Next Day</button>
+<button onclick="loadRealBitcoinPrice()">Load Real BTC Price</button>
+
+<script src="simulator.js"></script>
+
+</body>
+</html>
+
+
